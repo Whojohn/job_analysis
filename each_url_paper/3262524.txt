@@ -1,0 +1,15 @@
+带薪年假,包住,绩效奖金,免费班车
+1、参与DW或hadoop平台技术技术开发或测试；
+2、参与项目需求讨论；
+3、负责项目交付成果运维工作；    
+人员要求：
+1、大专以上学历，计算机相关专业；
+2、1年以上BI或DW或Hadoop相关经验；
+3、符合以下其中之一：
+    *了解HDFS、HBASE、STORM、SPARK、STOM、FLUME、HIVE、PIG之一；
+    *熟悉BI.Office、Cognos、BO、BIEE等BI工具之一；
+    *熟悉Datastage、PowerCenter、MSSSIS、KETTLE等ETL工具之一；
+    *熟悉CTM、MOIA、ETLPLUS之一
+    *熟悉Shell、Perl等脚本语言；
+4、熟悉Oracle、DB2、SQLServer之一；
+5、能在压力下工作。    

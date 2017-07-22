@@ -1,0 +1,9 @@
+六险一金,子女福利,地铁周边,技术大牛多
+1. 3年以上java开发经验，
+2. 精通Hadoop/Kafka/Storm/Spark开发 
+3. 熟练掌握Srping, Ibatis等常用开发框架；
+4. 熟悉JDBC, 多线程, Socket编程
+5. 熟悉java collections 框架及其使用方法.
+6.熟悉javascript、css，熟悉JQuery，EXT等JS前端框架
+7.熟悉oracle、mysql等常用数据库平台，有扎实的sql语言功底, 能够编写存储过程；
+8.具备良好的编程习惯，有文档写作、程序设计的能力3

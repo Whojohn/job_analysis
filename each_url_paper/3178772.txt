@@ -1,0 +1,31 @@
+外企氛围,前沿技术,周末双休,五险一金
+Responsibilities:
+    
+The   successful candidate will have technical responsibilities including:
+· Work with Product   Owner to build up a cost-effective and reliable solution based on requirement
+· Implement the   solution with agreed cost and good quality
+·Integrate the   application with other/external system or application
+·Troubleshooting and   bug fix
+·Deploy application   and support user
+·  Propose improvement   and optimization ideas and follow up
+   
+Skill   & experience required:
+ 
+· Bachelor degree or   equivalent/higher
+·  3+ years working   experience in projects related to Big Data eco-system, like Hadoop, Hive,   HBase, Spark, Kafka;
+· Experienced in OO   programing, and proven customer project with development languages, Java   and/or Python, Python experience takes precedence
+· Experienced in processing   large amounts of structured and unstructured data. MapReduce experience is a   plus
+·Experienced in   Linux shell script, knows how to configure and tune open source software
+· Experienced in   using JBoss/Wildfly, Git, Gerrit
+· Familiar with RDBMS (MySql, PostgresSql,   Oracle, etc.) and NoSQL (HBase, MongoDB, Redis, etc.)
+· Experience of   capacity and performance tuning in Big Data product is a plus
+·Understanding of   machine learning with hands-on experience in machine learning package, like scikit-learn,   is a plus
+· Experience in Web UI   development is a plus, especially React and other industrial architecture
+· Good communications   and willing to corporate
+·Self-motivated and   team working
+   
+1.具备大数据开发能力，出代码能力较高的engineer，这部分主要是在大数据应用的数据处理方面：ETL, Aggregation，入库
+2.对Python或Java熟悉，并有项目开发经验
+3.对使用Apache Hadoop生态系统进行大数据系统开发有经验
+4.特别是，在Hadoop生态链上，能使用Spark Streaming做ETL
+5.对数据库，只要有一般的了解和使用，只是一个辅助项，但不是决定因素

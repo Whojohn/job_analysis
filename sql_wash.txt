@@ -1,0 +1,201 @@
+-- 
+-- UPDATE lagou_copy SET lagou_copy.job_require='销售'
+-- WHERE lagou_copy.job_urls in
+-- (
+-- SELECT job_urls FROM(
+--  SELECT *
+-- FROM lagou_copy
+-- WHERE lagou_copy.job_require LIKE '%销售%'
+-- )TEMPTABLE
+-- )
+-- ;
+-- UPDATE lagou_copy SET lagou_copy.job_require='数据运营'
+-- WHERE lagou_copy.job_urls in
+-- (
+-- SELECT job_urls FROM(
+--  SELECT *
+-- FROM lagou_copy
+-- WHERE lagou_copy.job_require LIKE '%数据%运营%' or job_require LIKE '%运营%'
+-- )TEMPTABLE
+-- )
+-- ;
+-- 
+-- UPDATE lagou_copy SET lagou_copy.job_require='公关'
+-- WHERE lagou_copy.job_urls in
+-- (
+-- SELECT job_urls FROM(
+--  SELECT *
+-- FROM lagou_copy
+-- WHERE lagou_copy.job_require LIKE '%公关%' or job_require LIKE '%媒体%'
+-- )TEMPTABLE
+-- )
+-- ;
+-- UPDATE lagou_copy SET lagou_copy.job_require='公关'
+-- WHERE lagou_copy.job_urls in
+-- (
+-- SELECT job_urls FROM(
+--  SELECT *
+-- FROM lagou_copy
+-- WHERE lagou_copy.job_require LIKE '%%' 
+-- )TEMPTABLE
+-- )
+-- ;
+
+-- 
+-- UPDATE lagou_copy SET lagou_copy.job_require='产品经理'
+-- WHERE lagou_copy.job_urls in
+-- (
+-- SELECT job_urls FROM(
+--  SELECT *
+-- FROM lagou_copy
+-- WHERE lagou_copy.job_require LIKE '%产品经理%'
+-- )TEMPTABLE
+-- )
+-- ;
+-- 
+-- UPDATE lagou_copy SET lagou_copy.job_require='产品经理'
+-- WHERE lagou_copy.job_urls in
+-- (
+-- SELECT job_urls FROM(
+--  SELECT *
+-- FROM lagou_copy
+-- WHERE lagou_copy.job_require LIKE '%产品经理%'
+-- )TEMPTABLE
+-- )
+-- ;
+-- UPDATE lagou_copy SET lagou_copy.job_require='java大数据'
+-- WHERE lagou_copy.job_urls in
+-- (
+-- SELECT job_urls FROM(
+--  SELECT *
+-- FROM lagou_copy
+-- WHERE lagou_copy.job_require LIKE '%%java%大数据%%'
+-- )TEMPTABLE
+-- )
+-- ;
+-- UPDATE lagou_copy SET lagou_copy.job_require='数据挖掘'
+-- WHERE lagou_copy.job_urls in
+-- (
+-- SELECT job_urls FROM(
+--  SELECT *
+-- FROM lagou_copy
+-- WHERE lagou_copy.job_require LIKE '%数据挖掘%' or lagou_copy.job_require LIKE '%数据%挖掘%'
+-- )TEMPTABLE
+-- )
+-- ;
+-- 
+-- 
+-- UPDATE lagou_copy SET lagou_copy.job_require='数据算法（大数据）'
+-- WHERE lagou_copy.job_urls in
+-- (
+-- SELECT job_urls FROM(
+--  SELECT *
+-- FROM lagou_copy
+-- WHERE lagou_copy.job_require LIKE '%数据%算法%' or lagou_copy.job_require LIKE '%算法%'
+-- 
+-- )TEMPTABLE
+-- )
+-- ;
+-- 
+-- 
+-- UPDATE lagou_copy SET lagou_copy.job_require='数据算法（大数据）'
+-- WHERE lagou_copy.job_urls in
+-- (
+-- SELECT job_urls FROM(
+--   SELECT *
+-- FROM lagou_copy
+-- WHERE lagou_copy.job_require LIKE '%数据库%DBA%' 
+-- OR lagou_copy.job_require LIKE '%数据库%dba%' or lagou_copy.job_require LIKE '数据库%管理%'
+-- or lagou_copy.job_require LIKE '%数据库%运维%'
+-- 
+-- )TEMPTABLE
+-- )
+-- ;
+
+-- UPDATE lagou_copy SET lagou_copy.job_require='数据架构师'
+-- WHERE lagou_copy.job_urls in
+-- (
+-- SELECT job_urls FROM(
+--  SELECT *
+-- FROM lagou_copy
+-- WHERE lagou_copy.job_require LIKE '%数据%架构%' 
+-- )TEMPTABLE
+-- )
+-- ;
+
+-- -- 
+-- UPDATE lagou_copy SET lagou_copy.job_require='数据收集'
+-- WHERE lagou_copy.job_urls in
+-- (
+-- SELECT job_urls FROM(
+--  SELECT *
+-- FROM lagou_copy
+-- WHERE lagou_copy.job_require LIKE '%爬虫%' or lagou_copy.job_require LIKE '%收集%'  or lagou_copy.job_require LIKE '%采集%'
+-- )TEMPTABLE
+-- )
+-- ;
+-- 
+--  
+-- UPDATE lagou_copy SET lagou_copy.job_require='数据收集'
+-- WHERE lagou_copy.job_urls in
+-- (
+-- SELECT job_urls FROM(
+--  SELECT *
+-- FROM lagou_copy
+-- WHERE lagou_copy.job_require LIKE '%爬虫%' or lagou_copy.job_require LIKE '%收集%'  or lagou_copy.job_require LIKE '%采集%'
+-- )TEMPTABLE
+-- -- )
+-- ;
+-- 
+-- UPDATE lagou_copy SET lagou_copy.job_require='数据库开发'
+-- WHERE lagou_copy.job_urls in
+-- (
+-- SELECT job_urls FROM(
+--  SELECT *
+-- FROM lagou_copy
+-- WHERE lagou_copy.job_require LIKE '%数据库%开发%' or lagou_copy.job_require LIKE '%数据库%工程%'  
+-- )TEMPTABLE
+-- )
+-- -- ;
+-- UPDATE lagou_copy SET lagou_copy.job_require='数据分析'
+-- WHERE lagou_copy.job_urls in
+-- (
+-- SELECT job_urls FROM(
+--  SELECT *
+-- FROM lagou_copy
+-- WHERE lagou_copy.job_require LIKE '%数据%分析%'  OR job_require like '%分析%'
+-- )TEMPTABLE
+-- )
+-- ;
+-- UPDATE lagou_copy SET lagou_copy.job_require='数据开发'
+-- WHERE lagou_copy.job_urls in
+-- (
+-- SELECT job_urls FROM(
+--  SELECT *
+-- FROM lagou_copy
+-- WHERE lagou_copy.job_require LIKE '%大数据%开发%'  OR job_require LIKE '%数据开发%'  OR job_require LIKE '%数据工程师%'
+-- )TEMPTABLE
+-- )
+-- ;
+-- 
+-- UPDATE lagou_copy SET lagou_copy.job_require='数据挖掘'
+-- WHERE lagou_copy.job_urls in
+-- (
+-- SELECT job_urls FROM(
+--  SELECT *
+-- FROM lagou_copy
+-- WHERE lagou_copy.job_require LIKE '%数据%挖掘%'  
+-- )TEMPTABLE
+-- )
+-- ;
+-- UPDATE lagou_copy SET lagou_copy.job_require='数据仓库开发'
+-- WHERE lagou_copy.job_urls in
+-- (
+-- SELECT job_urls FROM(
+--  SELECT *
+-- FROM lagou_copy
+-- WHERE lagou_copy.job_require LIKE '%数据仓库%工程%' or job_require LIKE '%数据仓库%开发%'  
+-- )TEMPTABLE
+-- )
+-- ;
+
