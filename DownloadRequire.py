@@ -7,11 +7,6 @@ from lxml import etree
 import re
 import time
 from SqlControl import SqlControl
-MYSQL_HOSTS = "127.0.0.1"
-MYSQL_USER = "root"
-MYSQL_PASSWORD = "123456"
-MYSQL_PORT = 3306
-MYSQL_DB = "job"
 
 head= {'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
         'Accept-Encoding': 'gzip, deflate, sdch',
