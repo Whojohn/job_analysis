@@ -12,10 +12,15 @@ mpl.rcParams['font.serif'] = ['SimHei']
 
 class ThisSqlcontrol(SqlControl):
 
-    def insert(self,url_number,txt):
-        sqlCommand='insert into txt VALUES ("%s","%s")'%(url_number,txt)
+    def process_item(self, *item):
+        sqlCommand='select '+item[0]+' from lagou_copy'
         self.cur.execute(sqlCommand)
-        self.conn.commit()
+        urls_list=self.cur.fetchall()
+        return urls_list
+    # def insert(self,url_number,txt):
+    #     sqlCommand='insert into txt VALUES ("%s","%s")'%(url_number,txt)
+    #     self.cur.execute(sqlCommand)
+    #     self.conn.commit()
 
 
 sql = ThisSqlcontrol()
@@ -33,4 +38,5 @@ del df1['index']
 #df1w为处理后，df为处理前。 df处理后会丢失一定的数据（而这一部分的数据分类太费劲所以丢掉）
 df1.plot(kind="bar",x=df1['word'])
 df.plot(kind="bar",x=df['word'])
+print("stop")
 
