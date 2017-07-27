@@ -44,20 +44,23 @@ def load_data_train(sql,job_list,word_detail):
 # load_data_train参数传入的为取数据具体函数
 
 
-def load_all_train(load_data_train=load_data_train):
+def load_all_train(load_data_train=load_data_train,chain=None):
     job_list=[]
     sql = MySqlControl()
-    load_data_train(sql,job_list,r'"%数据%分析%"')
-    load_data_train(sql,job_list,r"'%数据%挖掘%'")
-    load_data_train(sql,job_list,r"'%数据库%'")
-    load_data_train(sql,job_list,r"'%项目%经理%'")
-    load_data_train(sql,job_list,r"'%产品%经理%'")
-    load_data_train(sql,job_list,r"'%运营%'")
-    load_data_train(sql,job_list,r"'%销售%'")
-    load_data_train(sql,job_list,r"'%数据库%开发%'")
-    load_data_train(sql,job_list,r"'%数据%开发%'and job_require NOT LIKE '%数据库%'")
-    load_data_train(sql,job_list,r"'%收集%'and job_require LIKE '%采集%'")
-    load_data_train(sql,job_list,r"'%大数据%'")
+    for x in chain:
+        load_data_train(sql,job_list,x)
+    # 上面循环相当于下面代码
+    # load_data_train(sql,job_list,r'"%数据%分析%"')
+    # load_data_train(sql,job_list,r"'%数据%挖掘%'")
+    # load_data_train(sql,job_list,r"'%数据库%'")
+    # load_data_train(sql,job_list,r"'%项目%经理%'")
+    # load_data_train(sql,job_list,r"'%产品%经理%'")
+    # load_data_train(sql,job_list,r"'%运营%'")
+    # load_data_train(sql,job_list,r"'%销售%'")
+    # load_data_train(sql,job_list,r"'%数据库%开发%'")
+    # load_data_train(sql,job_list,r"'%数据%开发%'and job_require NOT LIKE '%数据库%'")
+    # load_data_train(sql,job_list,r"'%收集%'and job_require LIKE '%采集%'")
+    # load_data_train(sql,job_list,r"'%大数据%'")
     sql.kill_sql()
     random.shuffle(job_list)
     return job_list
@@ -73,9 +76,9 @@ def load_data(sql,job_list,word_detail):
         job_list.append((word_cut,word_title))
 
 
-def train_and_test_data(data_):
+def train_and_test_data(data_,chain):
     # 训练集和测试集的比例为7:3
-    train_=load_all_train()
+    train_=load_all_train(chain=chain)
     train_data_ = [each[0] for each in train_]
     train_target_ = [each[1] for each in train_]
 
@@ -84,10 +87,12 @@ def train_and_test_data(data_):
 
     return train_data_, train_target_, test_data_, test_target_
 
-
-for x in range(300):
-    data = load_all_train(load_data_train=load_data)
-    train_data, train_target, test_data, test_target = train_and_test_data(data)
+k=0.001
+for x in range(30000):
+    chain=[r'"%数据%分析%"',r"'%数据%挖掘%'",r"'%数据库%'",r"'%项目%经理%'",r"'%产品%经理%'",r"'%运营%'",r"'%销售%'",r"'%数据库%开发%'",r"'%数据%开发%'and job_require NOT LIKE '%数据库%'",
+           r"'%收集%'and job_require LIKE '%采集%'",r"'%大数据%'"]
+    data = load_all_train(load_data_train=load_data,chain=chain)
+    train_data, train_target, test_data, test_target = train_and_test_data(data,chain)
     #sgd
     # nbc = Pipeline([
     #     ('vect', TfidfVectorizer()),
@@ -103,7 +108,7 @@ for x in range(300):
     # bad_dict=[]
     nbc = Pipeline([
         ('vect', TfidfVectorizer(stop_words=bad_dict)),
-        ('clf', MultinomialNB(alpha=0.1)),
+        ('clf', MultinomialNB(alpha=k)),
     ])
     nbc.fit(train_data, train_target)  # 训练我们的多项式模型贝叶斯分类器
     predict = nbc.predict(test_data)  # 在测试集上预测结果
